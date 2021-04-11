@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import website.ImportXML;
+import website.RepoService;
+import website.RepoService2;
+
 @Controller
 //@RequestMapping(path="/demo") // This means URL's start with /demo (after 
 public class WebController {
@@ -19,7 +23,37 @@ public class WebController {
 	
 	@RequestMapping("/")
 	ModelAndView home() {
-		 var params = new HashMap<String, HashMap<String, String>>();
+		 RepoService rs = new RepoService();
+		 try {
+			System.out.println("<<<<<< TESTING LOGGING IN TO JCR >>>>>>");
+			rs.init();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		 RepoService2 rs2 = new RepoService2();
+		 try {
+			 System.out.println("<<<<<<<< TESTING WRITE TO JCR >>>>>>>>>");
+			rs2.test();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		 
+		 ImportXML jcrXML = new ImportXML();
+		 try {
+			System.out.println("<<<<<<<< TESTING XML IMPORT TO JCR >>>>>>>>>");
+			jcrXML.importXML();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		 
+		 
+//		 var params = new HashMap<String, HashMap<String, String>>();
 		 var contentParams  = new HashMap<String, String>();
 		 contentParams.put("title", "Welcome to your new Website!");
 		 contentParams.put("footer","footer area");
