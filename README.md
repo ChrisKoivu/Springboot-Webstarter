@@ -13,7 +13,7 @@ to see how the sample website in action, download the jar from https://github.co
 
 
 > Resources: 
-Foundation: https://get.foundation/sites/docs/installation.html
-Freemarker: https://freemarker.apache.org/
-Good article on the Java Persistence API: https://www.infoworld.com/article/3373652/java-persistence-with-jpa-and-hibernate-part-1-entities-and-relationships.html
-Maven Central Repository: https://mvnrepository.com/repos/central
+[Foundation]: https://get.foundation/sites/docs/installation.html
+[Freemarker]: https://freemarker.apache.org/
+[Good article on the Java Persistence API]: https://www.infoworld.com/article/3373652/java-persistence-with-jpa-and-hibernate-part-1-entities-and-relationships.html
+[Maven Central Repository]: https://mvnrepository.com/repos/central
